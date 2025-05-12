@@ -1,138 +1,231 @@
-<table border="1" cellpadding="5" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Classe</th>
-      <th>NVL</th>
-      <th>VIG</th>
-      <th>MEN</th>
-      <th>RES</th>
-      <th>FOR</th>
-      <th>HAB</th>
-      <th>INT</th>
-      <th>FE</th>
-      <th>ARC</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Andarilho</td>
-      <td>9</td>
-      <td>15</td>
-      <td>10</td>
-      <td>11</td>
-      <td>14</td>
-      <td>13</td>
-      <td>9</td>
-      <td>9</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>Guerreiro</td>
-      <td>8</td>
-      <td>11</td>
-      <td>12</td>
-      <td>11</td>
-      <td>10</td>
-      <td>16</td>
-      <td>10</td>
-      <td>8</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>Heroi</td>
-      <td>7</td>
-      <td>14</td>
-      <td>9</td>
-      <td>12</td>
-      <td>16</td>
-      <td>9</td>
-      <td>7</td>
-      <td>8</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bandido</td>
-      <td>5</td>
-      <td>10</td>
-      <td>11</td>
-      <td>10</td>
-      <td>9</td>
-      <td>13</td>
-      <td>9</td>
-      <td>8</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>Astrologo</td>
-      <td>6</td>
-      <td>9</td>
-      <td>15</td>
-      <td>9</td>
-      <td>8</td>
-      <td>12</td>
-      <td>16</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>Profeta</td>
-      <td>7</td>
-      <td>10</td>
-      <td>14</td>
-      <td>8</td>
-      <td>11</td>
-      <td>10</td>
-      <td>7</td>
-      <td>16</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>Samurai</td>
-      <td>9</td>
-      <td>12</td>
-      <td>11</td>
-      <td>13</td>
-      <td>12</td>
-      <td>15</td>
-      <td>9</td>
-      <td>8</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>Prisioneiro</td>
-      <td>9</td>
-      <td>11</td>
-      <td>12</td>
-      <td>11</td>
-      <td>11</td>
-      <td>14</td>
-      <td>14</td>
-      <td>6</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>Confessor</td>
-      <td>10</td>
-      <td>10</td>
-      <td>13</td>
-      <td>10</td>
-      <td>12</td>
-      <td>12</td>
-      <td>9</td>
-      <td>14</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>Desprezado</td>
-      <td>1</td>
-      <td>10</td>
-      <td>10</td>
-      <td>10</td>
-      <td>10</td>
-      <td>10</td>
-      <td>10</td>
-      <td>10</td>
-      <td>10</td>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Classes Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+        }
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .card {
+            background-color: #333;
+            border: 1px solid #555;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+        }
+        .class-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #555;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #444;
+        }
+        td {
+            background-color: #222;
+        }
+        .items {
+            margin-top: 10px;
+        }
+        .items img {
+            width: 50px;
+            height: auto;
+            margin: 5px;
+            cursor: pointer; /* Alteração: cursor para indicar que é clicável */
+        }
+        .status {
+            margin-top: 20px;
+        }
+        .status table {
+            margin: 0 auto;
+        }
+        .status th {
+            background-color: #555;
+        }
+        .status td {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elden Ring Classes Catalog</h1>
+    <div id="catalog" class="catalog"></div>
+
+    <script>
+        // Dados das classes
+        const classes = [
+            {
+                name: "Hero",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/hero_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 14, Mind: 9, Endurance: 12, Strength: 16, Dexterity: 9, Intelligence: 7, Faith: 8, Arcane: 11 },
+                level: 0,
+                runes: 600,
+                items: [
+                    { name: "Battle Axe", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/battle_axe_melee_armaments_weapons_elden_ring_wiki_guide_75px.png" },
+                    { name: "Leather Shield", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/leather_shield_elden_ring_wiki_guide_75px.png" }
+                ]
+            },
+            {
+                name: "Bandit",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/bandit_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 10, Mind: 11, Endurance: 10, Strength: 9, Dexterity: 13, Intelligence: 9, Faith: 8, Arcane: 14 },
+                level: 0,
+                runes: 700,
+                items: [
+                    { name: "Shortbow", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/shortbow_elden_ring_wiki_guide_75px.png" },
+                    { name: "Bone Arrows (Fletched)", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/bone_arrows_fletched_ammunition_elden_ring_wiki_guide_75px.png" },
+                    { name: "Great Knife", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/great_knife_elden_ring_wiki_guide_75px.png" }
+                ]
+            },
+            {
+                name: "Astrologer",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/astrologer_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 9, Mind: 15, Endurance: 9, Strength: 8, Dexterity: 12, Intelligence: 16, Faith: 7, Arcane: 9 },
+                level: 0,
+                runes: 500,
+                items: [
+                    { name: "Astrologer's Staff", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/astrologers_staff-elden-ring-wiki-guide-200px.png" },
+                    { name: "Glintstone Pebble", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_pebble_spells_elden_ring_wiki_guide_200px.png" },
+                    { name: "Glintstone Arc", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_arc_spells_elden_ring_wiki_guide_200px.png" }
+                ]
+            },
+            {
+                name: "Warrior",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/warrior_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 11, Mind: 12, Endurance: 11, Strength: 10, Dexterity: 16, Intelligence: 10, Faith: 8, Arcane: 9 },
+                level: 0,
+                runes: 500,
+                items: [
+                    { name: "Scimitar (Left Hand)", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/scimitar_weapons_elden_ring_wiki_guide_75px.png" },
+                    { name: "Scimitar (Right Hand)", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/scimitar_weapons_elden_ring_wiki_guide_200px.png" }
+                ]
+            },
+            {
+                name: "Prisoner",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/prisoner_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 11, Mind: 12, Endurance: 11, Strength: 11, Dexterity: 14, Intelligence: 14, Faith: 6, Arcane: 9 },
+                level: 0,
+                runes: 450,
+                items: [
+                    { name: "Estoc", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/estoc_thrusting-sword_weapons-elden-ring-wiki-guide-200.png" },
+                    { name: "Glintstone Staff", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_staff_elden_ring_wiki_guide_75px.png" },
+                    { name: "Magic Glintblade", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/magic_glintblade_elden_ring_wiki_guide_75px.png" }
+                ]
+            },
+            {
+                name: "Vagabond",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/vagabond_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 15, Mind: 10, Endurance: 11, Strength: 14, Dexterity: 13, Intelligence: 9, Faith: 9, Arcane: 7 },
+                level: 0,
+                runes: 450,
+                items: [
+                    { name: "Longsword", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/longsword_elden_ring_wiki_guide_75px.png" },
+                    { name: "Heater Shield", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/heater-sheild-starting-equipment-vagabond-elden-ring-wiki-guide-75-px.png" }
+                ]
+            },
+            {
+                name: "Samurai",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/samurai_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 15, Mind: 10, Endurance: 13, Strength: 12, Dexterity: 15, Intelligence: 9, Faith: 8, Arcane: 8 },
+                level: 0,
+                runes: 500,
+                items: [
+                    { name: "Uchigatana", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/uchigatana_elden_ring_wiki_guide_75px.png" },
+                    { name: "Longbow", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/longbow__weapons-elden-ring-wiki-guide-200.png" },
+                    { name: "Fire Arrows", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/fire_arrow_arrow_-elden-ring-wiki-guide-200px.png" }
+                ]
+            },
+            {
+                name: "Prophet",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/prophet_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 10, Mind: 14, Endurance: 8, Strength: 11, Dexterity: 10, Intelligence: 7, Faith: 16, Arcane: 10 },
+                level: 0,
+                runes: 600,
+                items: [
+                    { name: "Short Spear", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/short-spear__weapons-elden-ring-wiki-guide-200.png" },
+                    { name: "Finger Seal", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/finger-seal_armament-elden-ring-wiki-guide-200.png" },
+                    { name: "Heal Spell", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/heal_spells_elden_ring_wiki_guide_75px.png" },
+                    { name: "Catch Flame Spell", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/catch_flame_elden_ring_wiki_guide_75px.png" }
+                ]
+            },
+            {
+                name: "Confessor",
+                image: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/confessor_class_elden_ring_wiki_guide_200px.png",
+                stats: { Vigor: 10, Mind: 13, Endurance: 10, Strength: 12, Dexterity: 12, Intelligence: 9, Faith: 14, Arcane: 9 },
+                level: 0,
+                runes: 400,
+                items: [
+                    { name: "Broadsword", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/broadsword_elden_ring_wiki_guide_75px.png" },
+                    { name: "Blue Crest Heater Shield", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/blue-crest-heater-shield-elden-ring-wiki-guide-200.png" },
+                    { name: "Urgent Heal Spell", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/urgent_heal_spells_elden_ring_wiki_guide_75px.png" },
+                    { name: "Assassin's Approach Spell", img: "https://eldenring.wiki.fextralife.com/file/Elden-Ring/assassins_approach_elden_ring_wiki_guide_75px.png" }
+                ]
+            }
+        ];
+
+        // Renderizando as classes
+        const catalog = document.getElementById('catalog');
+        classes.forEach(cls => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${cls.image}" alt="${cls.name}">
+                <div class="class-title">${cls.name}</div>
+                <table>
+                    <tr><th>Atributo</th><th>Valor</th></tr>
+                    ${Object.keys(cls.stats).map(stat => `<tr><td>${stat}</td><td>${cls.stats[stat]}</td></tr>`).join('')}
+                </table>
+                <div class="items">
+                    <h4>Itens Iniciais:</h4>
+                    ${cls.items.map(item => `<img src="${item.img}" alt="${item.name}" onclick="handleItemClick('${item.name}')">`).join('')}
+                </div>
+                <div class="status">
+                    <h4>Status</h4>
+                    <table>
+                        <tr><th>Nível</th><th>Runas</th></tr>
+                        <tr><td>${cls.level}</td><td>${cls.runes}</td></tr>
+                    </table>
+                </div>
+            `;
+            catalog.appendChild(card);
+        });
+
+        // Função para exibir o nome do item ao clicar
+        function handleItemClick(itemName) {
+            alert(`Item: ${itemName}`);
+        }
+    </script>
+</body>
+</html>
